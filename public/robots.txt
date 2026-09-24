@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://asm010101.github.io/sitemap.xml

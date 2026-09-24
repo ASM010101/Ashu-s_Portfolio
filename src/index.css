@@ -1,0 +1,322 @@
+/* =========================================================================
+   ASHISH MAURYA — APPLIED AI PORTFOLIO DESIGN SYSTEM
+   THEME: AN AI ENGINEER'S SKETCHBOOK BECOMING A MACHINE
+   ========================================================================= */
+
+:root {
+  /* Core Color Palette */
+  --bg-deep: #07080b;
+  --bg-surface: #0c0e14;
+  --bg-card: rgba(15, 18, 26, 0.75);
+  --bg-card-hover: rgba(22, 27, 38, 0.85);
+  
+  /* Text & Inks */
+  --text-primary: #f0f6fc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-blueprint: #38bdf8;
+  --text-hand: #ffd166;
+  
+  /* Semantic Accent Accents */
+  --accent-cyan: #00f0ff;
+  --accent-cyan-glow: rgba(0, 240, 255, 0.25);
+  --accent-cyan-dim: rgba(0, 240, 255, 0.1);
+  --accent-coral: #ff6b4a;
+  --accent-coral-glow: rgba(255, 107, 74, 0.25);
+  --accent-gold: #ffd166;
+  --accent-emerald: #00f59b;
+  --accent-violet: #a78bfa;
+  
+  /* Technical Grid Lines & Borders */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-technical: rgba(0, 240, 255, 0.2);
+  --border-active: rgba(0, 240, 255, 0.6);
+  --grid-line: rgba(0, 240, 255, 0.04);
+  
+  /* Typography */
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'IBM Plex Mono', monospace;
+  --font-hand: 'Caveat', cursive;
+  
+  /* Transitions */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-medium: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Elevation */
+  --glow-cyan: 0 0 25px rgba(0, 240, 255, 0.25);
+  --glow-coral: 0 0 25px rgba(255, 107, 74, 0.25);
+}
+
+/* Base Reset & Smooth Scroll */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--bg-deep);
+  background-image: 
+    radial-gradient(circle at 1px 1px, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to right, rgba(0, 240, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.02) 1px, transparent 1px);
+  background-size: 24px 24px, 120px 120px, 120px 120px;
+  background-position: 0 0, 0 0, 0 0;
+  position: relative;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 240, 255, 0.2);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-cyan);
+}
+
+/* Focus Visible for Accessibility */
+:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 3px;
+}
+
+/* Typography Utilities */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+p {
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+code, kbd, pre, .font-mono {
+  font-family: var(--font-mono);
+}
+
+.font-hand {
+  font-family: var(--font-hand);
+}
+
+/* Engineering Blueprint & Handcrafted Sketchbook Styles */
+.blueprint-panel {
+  background: rgba(11, 14, 22, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-technical);
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.blueprint-panel:hover {
+  border-color: var(--border-active);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.65), var(--glow-cyan);
+}
+
+/* Handcrafted Sketch Notebook Vignette */
+.sketchbook-vignette {
+  position: relative;
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  box-shadow: 0 0 0 2px rgba(11, 14, 22, 0.9), 0 0 0 3px rgba(0, 240, 255, 0.15);
+}
+
+/* Blueprint Corner Crosshairs */
+.corner-crosshair::before,
+.corner-crosshair::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-color: var(--accent-cyan);
+  pointer-events: none;
+}
+.corner-crosshair::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid var(--accent-cyan);
+  border-left: 2px solid var(--accent-cyan);
+}
+.corner-crosshair::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid var(--accent-cyan);
+  border-right: 2px solid var(--accent-cyan);
+}
+
+/* Engineering Technical Label */
+.tech-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 3px;
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  color: var(--accent-cyan);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tech-tag-coral {
+  background: rgba(255, 107, 74, 0.08);
+  border-color: rgba(255, 107, 74, 0.3);
+  color: var(--accent-coral);
+}
+
+.tech-tag-emerald {
+  background: rgba(0, 245, 155, 0.08);
+  border-color: rgba(0, 245, 155, 0.3);
+  color: var(--accent-emerald);
+}
+
+.tech-tag-gold {
+  background: rgba(255, 209, 102, 0.08);
+  border-color: rgba(255, 209, 102, 0.3);
+  color: var(--accent-gold);
+}
+
+/* Hand-Drawn Notebook Margin Note */
+.hand-annotation {
+  font-family: var(--font-hand);
+  font-size: 1.25rem;
+  color: var(--text-hand);
+  line-height: 1.2;
+  transform: rotate(-1.5deg);
+  display: inline-block;
+  text-shadow: 0 0 12px rgba(255, 209, 102, 0.2);
+}
+
+/* Scanline / Oscilloscope Overlay */
+.scanline-effect {
+  position: relative;
+  overflow: hidden;
+}
+.scanline-effect::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+  background-size: 100% 4px;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+/* Buttons */
+.btn-primary {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--accent-cyan);
+  color: #07080b;
+  border: 1px solid var(--accent-cyan);
+  padding: 10px 22px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+.btn-primary:hover {
+  background: #38bdf8;
+  box-shadow: 0 0 20px var(--accent-cyan-glow);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: rgba(15, 18, 26, 0.8);
+  color: var(--text-primary);
+  border: 1px solid var(--border-technical);
+  padding: 10px 22px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+.btn-secondary:hover {
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  background: rgba(0, 240, 255, 0.05);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Animations */
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.04); }
+}
+
+@keyframes signalBlink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0.2; }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.signal-blinking {
+  animation: signalBlink 1.2s infinite;
+}
+
+/* Recruiter Mode Transition */
+.recruiter-mode-active {
+  --bg-deep: #08090d;
+  --bg-surface: #0f1218;
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
