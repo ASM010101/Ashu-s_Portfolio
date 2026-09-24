@@ -1,87 +1,195 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-    <title>Ashish Maurya — Applied AI Engineer | LLMs, RAG, Speech AI & Agentic Systems</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Applied AI Engineer specializing in LLMs, RAG pipelines, Speech AI, and Agentic Systems. M.Tech AI at IIT Patna, IEEE & ICICS published researcher with production AI engineering experience at Samespace and HyperVerge." />
-    <meta name="keywords" content="Ashish Maurya, Applied AI Engineer, LLMs, RAG, Speech AI, Agentic Systems, MCP Servers, Stable Diffusion, ControlNet, PyTorch, IIT Patna, Samespace, HyperVerge, IndiaAI Mission" />
-    <meta name="author" content="Ashish Maurya" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://asm010101.github.io/" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="theme-color" content="#08090c" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://asm010101.github.io/" />
-    <meta property="og:title" content="Ashish Maurya — Applied AI Engineer | Beyond the Model" />
-    <meta property="og:description" content="I build the systems around the model. Interactive engineering sketchbook: LLMs, RAG, Speech AI & Agentic Systems." />
-    <meta property="og:site_name" content="Ashish Maurya Portfolio" />
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preload" as="image" href="./textures/paper-texture.webp" type="image/webp" fetchpriority="high" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="./favico.png" />
+  <link rel="apple-touch-icon" href="./favico.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fafafa" />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://asm010101.github.io/" />
-    <meta property="twitter:title" content="Ashish Maurya — Applied AI Engineer" />
-    <meta property="twitter:description" content="Applied AI Engineer — LLMs, RAG, Speech AI & Agentic Systems. M.Tech AI at IIT Patna." />
+  <!-- SEO Meta Tags -->
+  <title>Ashish Maurya | Applied AI Engineer — LLMs, RAG, Speech AI & Agentic Systems</title>
+  <meta name="description"
+    content="Interactive 3D hand-drawn portfolio of Ashish Maurya — Applied AI Engineer (M.Tech AI IIT Patna, ex-Samespace). Explore real-time speech AI, agentic systems, RAG, and WebGL." />
+  <meta name="author" content="Ashish Maurya" />
+  <meta name="keywords"
+    content="Ashish Maurya, Applied AI Engineer, LLM Engineer, Speech AI, RAG, Agentic Systems, IIT Patna AI, Samespace, Machine Learning Engineer, Python, PyTorch, LangChain, Three.js portfolio" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://asm010101.github.io/Ashu-s_Portfolio/" />
 
-    <!-- Google Fonts Preconnect & Loading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Patrick+Hand&family=Permanent+Marker&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Open Graph (Facebook, LinkedIn, Discord) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ashish Maurya | Applied AI Engineer — LLMs, RAG, Speech AI & Agentic Systems" />
+  <meta property="og:description"
+    content="Interactive 3D hand-drawn portfolio of Ashish Maurya — Applied AI Engineer (M.Tech AI IIT Patna, ex-Samespace). Explore real-time speech AI, agentic systems, RAG, and WebGL." />
+  <meta property="og:url" content="https://asm010101.github.io/Ashu-s_Portfolio/" />
+  <meta property="og:site_name" content="Ashish Maurya Portfolio" />
+  <meta property="og:image" content="./og-image.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_US" />
 
-    <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Person",
-          "@id": "https://asm010101.github.io/#person",
-          "name": "Ashish Maurya",
-          "jobTitle": "Applied AI Engineer",
-          "description": "Applied AI Engineer specializing in LLMs, RAG, Speech AI, and Agentic Systems.",
-          "email": "mailto:amashish950@gmail.com",
-          "telephone": "+916306602646",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Mirzapur",
-            "addressRegion": "UP",
-            "addressCountry": "India"
-          },
-          "alumniOf": [
-            {
-              "@type": "CollegeOrUniversity",
-              "name": "SRM Institute of Science and Technology"
-            },
-            {
-              "@type": "CollegeOrUniversity",
-              "name": "Indian Institute of Technology (IIT) Patna"
-            }
-          ],
-          "sameAs": [
-            "https://github.com/ASM010101",
-            "https://linkedin.com/in/ashish-maurya-728396262/"
-          ]
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://asm010101.github.io/#website",
-          "url": "https://asm010101.github.io/",
-          "name": "Ashish Maurya Portfolio",
-          "description": "An AI Engineer's Sketchbook Becoming a Machine — Applied AI Portfolio of Ashish Maurya",
-          "publisher": {
-            "@id": "https://asm010101.github.io/#person"
-          }
-        }
-      ]
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ashish Maurya | Applied AI Engineer — LLMs, RAG, Speech AI & Agentic Systems" />
+  <meta name="twitter:description"
+    content="Interactive 3D hand-drawn portfolio of Ashish Maurya — Applied AI Engineer (M.Tech AI IIT Patna, ex-Samespace). Explore real-time speech AI, agentic systems, RAG, and WebGL." />
+  <meta name="twitter:image" content="./og-image.webp" />
+
+  <!-- Google Fonts: Hand-drawn + Primary -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Gloria+Hallelujah&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    /* Absolute SEO text hiding - completely accessible to Googlebot, invisible to users */
+    .sr-only-seo {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
     }
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  </style>
+</head>
+
+<body>
+  <!-- SEO Fallback for WebGL SPAs -->
+  <div id="seo-content" class="sr-only-seo">
+    <header>
+      <h1>Ashish Maurya | Applied AI Engineer — LLMs, RAG, Speech AI & Agentic Systems</h1>
+      <p>Interactive, WebGL-powered hand-drawn portfolio showcasing neural architectures, speech AI, and agentic workflows.</p>
+    </header>
+    
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li><a href="./">Home (The Corridor)</a></li>
+        <li><a href="./gallery">Gallery & Projects</a></li>
+        <li><a href="./about">About Me (Sky Journey)</a></li>
+        <li><a href="./studio">Studio (Deep Dives)</a></li>
+        <li><a href="./contact">Contact & Socials</a></li>
+      </ul>
+    </nav>
+    
+    <main>
+      <article id="home-corridor">
+        <header>
+          <h2>Experience the 3D Corridor: A Journey Through Code and Art</h2>
+        </header>
+        <section>
+          <h3>Welcome to Ashish Maurya's Interactive AI Universe</h3>
+          <p>
+            Welcome to the interactive 3D portfolio of <strong>Ashish Maurya</strong>, Applied AI Engineer specializing in LLMs, Retrieval-Augmented Generation, Speech AI, and Autonomous Agentic Systems. 
+            Pursuing an M.Tech in Artificial Intelligence at IIT Patna (2026–2028) and having engineered low-latency voice pipelines and multi-agent systems at Samespace, Ashish bridges deep learning research and scalable production deployments.
+          </p>
+          <p>
+            When you enter this portfolio, you find yourself in a carefully hand-drawn 3D corridor. Every texture, every frame, and every interactive element was custom-crafted to demonstrate what is possible when modern web technologies meet unbridled creativity.
+          </p>
+        </section>
+      </article>
+
+      <article id="about-me">
+        <header>
+          <h2>About Ashish Maurya: Applied AI Engineer</h2>
+        </header>
+        <section>
+          <h3>My Engineering & Research Journey</h3>
+          <p>
+            My name is <strong>Ashish Maurya</strong>, and I am an Applied AI Engineer with deep expertise in LLMs, Speech AI, RAG, and Agentic Systems. 
+            I earned my Bachelor of Technology in Computer Science & Engineering (AI & ML) from SRM Institute of Science and Technology (2021–2025) with a CGPA of 9.04 / 10.00, and am pursuing my Master of Technology (M.Tech) in Artificial Intelligence at the Indian Institute of Technology (IIT) Patna (2026–2028).
+          </p>
+          <p>
+            At Samespace (Jul 2025 – Jun 2026), I served as an SDE-1 AI/ML Engineer, building production RAG pipelines with FAISS, fine-tuning foundation models for tool-calling, architecting multi-agent systems on Google ADK with custom MCP servers, and developing multilingual TTS with speech-to-speech accent translation.
+          </p>
+          <p>
+            Prior to Samespace, I was a Research Fellow under the prestigious IndiaAI Mission grant (Sep 2024 – Feb 2025) designing the ICIP framework for controllable Stable Diffusion generation, and a Research Fellow at HyperVerge Nexus (Feb 2024 – Jun 2024) focusing on synthetic ID generation and document forgery detection.
+          </p>
+        </section>
+        <section>
+          <h3>Core Technical Skills</h3>
+          <ul>
+            <li><strong>Languages:</strong> Python, C, C++, JavaScript, HTML, CSS</li>
+            <li><strong>AI / Machine Learning:</strong> PyTorch, TensorFlow, Transformers, Diffusers, PEFT, Scikit-Learn</li>
+            <li><strong>LLMs & Generative AI:</strong> RAG, FAISS, Qdrant, Weaviate, Tool Calling, Fine-Tuning, Prompt Engineering, LoRA, Stable Diffusion</li>
+            <li><strong>Computer Vision:</strong> YOLOv8, OpenCV, Roboflow</li>
+            <li><strong>Agentic AI:</strong> Google ADK, MCP Servers, Guardrails, Automated Evaluations</li>
+            <li><strong>Infrastructure & Tools:</strong> Docker, Git, Linux, AWS</li>
+            <li><strong>Databases:</strong> MySQL, PostgreSQL</li>
+          </ul>
+        </section>
+      </article>
+
+      <article id="gallery-projects">
+        <header>
+          <h2>The Gallery: Research Publications & Engineering Systems</h2>
+        </header>
+        
+        <section>
+          <h3>Obstacle Detection in Path Planning for Unmanned Aerial Vehicles Based on YOLO</h3>
+          <p>
+            Published in <strong>IEEE</strong> (Jun 2024). Evaluates YOLO object detection efficiency and deployment constraints on resource-limited UAV platforms for autonomous path planning.
+            <a href="https://ieeexplore.ieee.org/document/10550335" target="_blank" rel="noopener noreferrer">View IEEE Publication</a>
+          </p>
+        </section>
+
+        <section>
+          <h3>ICIP: An Integrated Approach for AI Image Generation Using Stable Diffusion</h3>
+          <p>
+            Published in <strong>Taylor & Francis ICICS 2025</strong> (VVCE Mysuru, Feb 2025). Corresponding Author. Proposed a novel framework combining Stable Diffusion, ControlNet, IP-Adapter, and inpainting for controllable, realistic image generation under IndiaAI Mission research grant.
+            <a href="https://www.researchgate.net/publication/401880407_ICIP_An_integrated_approach_for_AI_image_generation_using_stable_diffusion" target="_blank" rel="noopener noreferrer">View on ResearchGate</a>
+          </p>
+        </section>
+
+        <section>
+          <h3>Online Video KYC System</h3>
+          <p>
+            Built an AI-powered KYC system for secure customer onboarding engineered for the <strong>Standard Chartered Hackathon</strong>, combining face verification with automated document validation workflows.
+            <a href="https://github.com/ASM010101" target="_blank" rel="noopener noreferrer">GitHub Project</a>
+          </p>
+        </section>
+
+        <section>
+          <h3>Financial Anomaly Detection System</h3>
+          <p>
+            Financial-transaction anomaly-detection system engineered for the <strong>Barclays Hackathon</strong> (Finalist Round), leveraging machine learning and transactional pattern data analytics.
+            <a href="https://github.com/ASM010101" target="_blank" rel="noopener noreferrer">GitHub Project</a>
+          </p>
+        </section>
+      </article>
+
+      <article id="contact-room">
+        <header>
+          <h2>Connect with Ashish Maurya</h2>
+        </header>
+        <section>
+          <h3>Engineering, Research, and Career Opportunities</h3>
+          <p>
+            Looking to collaborate on applied AI engineering, LLMs, low-latency Speech AI, or autonomous multi-agent systems?
+            Connect directly through:
+            <a href="https://linkedin.com/in/ashish-maurya-728396262/" target="_blank" rel="noopener noreferrer">LinkedIn</a>, 
+            <a href="https://github.com/ASM010101" target="_blank" rel="noopener noreferrer">GitHub</a>, or 
+            <a href="mailto:amashish950@gmail.com">amashish950@gmail.com</a>.
+          </p>
+        </section>
+      </article>
+    </main>
+  </div>
+
+  <!-- Noscript strict fallback -->
+  <noscript>
+    Please enable JavaScript to experience the interactive 3D portfolio of Ashish Maurya.
+  </noscript>
+
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
