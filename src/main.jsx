@@ -1,7 +1,14 @@
 import './initAssets.js'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { extend } from '@react-three/fiber'
+import { RevealMaterial } from './components/canvas/shaders/RevealMaterial.jsx'
+import { RevealBasicMaterial } from './components/canvas/shaders/RevealBasicMaterial.jsx'
+import { PaintRevealMaterial } from './components/canvas/shaders/PaintRevealMaterial.jsx'
 import App from './App.jsx'
+
+// Explicitly register custom materials at app root so Rollup never tree-shakes them
+extend({ RevealMaterial, RevealBasicMaterial, PaintRevealMaterial })
 
 // --- Console Signature ---
 if (typeof window !== 'undefined') {

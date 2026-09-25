@@ -3,7 +3,7 @@ import { useTexture, Text } from '@react-three/drei';
 import * as THREE from 'three';
 import { useFrame, useThree } from '@react-three/fiber';
 import gsap from 'gsap';
-import '../shaders/RevealMaterial';
+import { RevealMaterial } from '../shaders/RevealMaterial';
 import { isTouchDevice } from '../../../utils/deviceDetect';
 /**
  * CorridorDecorations - Dekoracje korytarza.

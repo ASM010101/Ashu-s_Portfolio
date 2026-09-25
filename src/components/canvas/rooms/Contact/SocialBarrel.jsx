@@ -3,7 +3,7 @@ import { useFrame } from '@react-three/fiber';
 import { useTexture, Text } from '@react-three/drei';
 import * as THREE from 'three';
 import gsap from 'gsap';
-import '../../shaders/RevealMaterial';
+import { RevealMaterial } from '../../shaders/RevealMaterial';
 import { isTouchDevice } from '../../../../utils/deviceDetect';
 
 // Reusable Vector3 to avoid allocations in useFrame

@@ -4,7 +4,7 @@ import { Text, Plane, useTexture } from '@react-three/drei';
 import * as THREE from 'three';
 import gsap from 'gsap';
 import { PositionalAudio } from '@react-three/drei';
-import '../shaders/RevealMaterial'; // Registers alpha-discard reveal shader
+import { RevealMaterial } from '../shaders/RevealMaterial'; // Registers alpha-discard reveal shader
 import { useAudio } from '../../../../context/AudioManager';
 import { isTouchDevice } from '../../../../utils/deviceDetect';
 

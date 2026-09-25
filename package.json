@@ -3,6 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "sideEffects": [
+    "*.css",
+    "*.scss",
+    "./src/components/canvas/shaders/*",
+    "./src/initAssets.js"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",

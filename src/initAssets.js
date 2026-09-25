@@ -16,17 +16,34 @@ export const baseUrl = rawBase.endsWith('/') ? rawBase : rawBase + '/';
 export const resolveAssetUrl = (url) => {
   if (typeof url !== 'string') return url;
   if (!baseUrl || baseUrl === '/') return url;
-  if (
-    url.startsWith('http://') ||
-    url.startsWith('https://') ||
-    url.startsWith('data:') ||
-    url.startsWith('blob:')
-  ) {
+
+  // Handle data or blob URLs
+  if (url.startsWith('data:') || url.startsWith('blob:')) {
     return url;
   }
+
+  // Handle absolute URLs pointing to current origin (e.g. from Troika toAbsoluteURL)
+  if (typeof window !== 'undefined' && window.location && window.location.origin) {
+    const origin = window.location.origin;
+    if (url.startsWith(origin)) {
+      const path = url.slice(origin.length);
+      if (path.startsWith('/') && !path.startsWith(baseUrl)) {
+        return origin + baseUrl + path.slice(1);
+      }
+      return url;
+    }
+  }
+
+  // Handle external third-party URLs (e.g. https://fonts.gstatic.com)
+  if (url.startsWith('http://') || url.startsWith('https://')) {
+    return url;
+  }
+
+  // Handle root-relative paths like '/fonts/...' or '/textures/...'
   if (url.startsWith('/') && !url.startsWith(baseUrl)) {
     return baseUrl + url.slice(1);
   }
+
   return url;
 };
 
