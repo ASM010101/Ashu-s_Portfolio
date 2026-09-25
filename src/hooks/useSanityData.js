@@ -3,6 +3,7 @@ import { sanityClient, urlFor, getProxyUrl } from '../config/sanity';
 import { useTexture } from '@react-three/drei';
 import { useLoader } from '@react-three/fiber';
 import { TextureLoader } from 'three';
+import { resolveAssetUrl } from '../initAssets';
 
 // Flaga bezpieczeństwa: Jeśli użytkownik nie wpisał jeszcze Project ID, 
 // hooki zwrócą null, co pozwoli na załadowanie danych hardcodowanych (fallback).
@@ -34,7 +35,7 @@ function notifyUpdate() {
 const preloadBrowserImage = (path) => {
     if (typeof window === 'undefined' || !path) return;
     const img = new Image();
-    img.src = path;
+    img.src = resolveAssetUrl(path);
 };
 
 // Sprawdzenie, czy urządzenie obsługuje hover (kursory, komputery)

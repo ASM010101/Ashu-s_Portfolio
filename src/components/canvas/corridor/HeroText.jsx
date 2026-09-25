@@ -3,9 +3,11 @@ import { useFrame, useThree } from '@react-three/fiber';
 import { Text } from '@react-three/drei';
 import * as THREE from 'three';
 
+import { resolveAssetUrl } from '../../../initAssets';
+
 // Local fonts for sketch-style typography (TTF format required by troika)
-const RUBIK_SCRIBBLE_URL = '/fonts/RubikScribble-Regular.ttf';
-const CABIN_SKETCH_URL = '/fonts/CabinSketch-Regular.ttf';
+const RUBIK_SCRIBBLE_URL = resolveAssetUrl('/fonts/RubikScribble-Regular.ttf');
+const CABIN_SKETCH_URL = resolveAssetUrl('/fonts/CabinSketch-Regular.ttf');
 
 // Global flag - draw animation only happens ONCE per page load
 let hasPlayedDrawAnimation = false;

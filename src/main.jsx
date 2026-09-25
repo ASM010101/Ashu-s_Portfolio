@@ -1,18 +1,7 @@
+import './initAssets.js'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import * as THREE from 'three'
 import App from './App.jsx'
-
-// --- Global Three.js LoadingManager URL resolution for base paths (GitHub Pages) ---
-const baseUrl = import.meta.env.BASE_URL;
-if (baseUrl && baseUrl !== '/') {
-  THREE.DefaultLoadingManager.setURLModifier((url) => {
-    if (typeof url === 'string' && url.startsWith('/') && !url.startsWith(baseUrl)) {
-      return baseUrl + url.slice(1);
-    }
-    return url;
-  });
-}
 
 // --- Console Signature ---
 if (typeof window !== 'undefined') {

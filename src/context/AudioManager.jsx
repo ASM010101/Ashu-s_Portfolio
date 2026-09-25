@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, useEffect, useRef, useCallback } from 'react';
+import { resolveAssetUrl } from '../initAssets';
 
 const AudioContext = createContext({
     isMuted: false,
@@ -84,7 +85,7 @@ export const AudioProvider = ({ children }) => {
             'otwarciedrzwi': '/sounds/otwarciedrzwi.mp3',   // Otwarcie głównych/bocznych drzwi
             'zamknieciedrzwi': '/sounds/zamknieciedrzwi.mp3' // Zamykanie drzwi
         };
-        const path = soundPaths[soundName] || `/sounds/${soundName}.mp3`;
+        const path = resolveAssetUrl(soundPaths[soundName] || `/sounds/${soundName}.mp3`);
 
         // In "simulation mode" or if file missing, this might error.
         // We'll trust the browser to handle 404s without crashing JS.

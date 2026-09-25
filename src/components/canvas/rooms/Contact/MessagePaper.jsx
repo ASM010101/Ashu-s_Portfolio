@@ -3,10 +3,11 @@ import { useRef, useState, useEffect, useMemo, useCallback } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { Text, useTexture, Html, useCursor } from '@react-three/drei';
 import * as THREE from 'three';
+import { resolveAssetUrl } from '../../../../initAssets';
 
 const PAPER_WIDTH = 1.51; // Legacy ratio 1197/1340
 const PAPER_HEIGHT = 1.7;
-const FONT_PATH = '/fonts/CabinSketch-Regular.ttf';
+const FONT_PATH = resolveAssetUrl('/fonts/CabinSketch-Regular.ttf');
 
 // Helper: Interactive Text Field with Smooth Animation and Invisible Hitbox
 const InteractiveTextField = ({

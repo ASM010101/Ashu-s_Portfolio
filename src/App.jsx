@@ -1,4 +1,6 @@
-import { useState, Suspense, useEffect, useCallback, useLayoutEffect, lazy } from 'react';
+import './initAssets.js';
+import { resolveAssetUrl } from './initAssets.js';
+import { useState, Suspense, useEffect, useCallback, useLayoutEffect, lazy, Component } from 'react';
 import { Canvas, useThree, useFrame, useLoader } from '@react-three/fiber';
 import { Preload, useTexture, Text, PerformanceMonitor } from '@react-three/drei';
 import * as THREE from 'three';
@@ -24,8 +26,8 @@ if (import.meta.env.VITE_POSTHOG_KEY) {
   });
 }
 
-// Lazy load the heavy 3D experience
-const Experience = lazy(() => import('./components/canvas/Experience'));
+// Direct static import of Experience to eliminate React 19 / R3F dynamic chunk Suspense deadlock
+import Experience from './components/canvas/Experience';
 
 import './styles/main.scss';
 
@@ -46,9 +48,9 @@ import { TextureLoader } from 'three';
 
 // Standard Browser-level Image Preloader (for <img> tags)
 const preloadBrowserImage = (path) => {
-  if (typeof window === 'undefined') return;
+  if (typeof window === 'undefined' || !path) return;
   const img = new Image();
-  img.src = path;
+  img.src = resolveAssetUrl(path);
 };
 
 const isMobileDevice = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent || '');

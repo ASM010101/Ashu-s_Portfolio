@@ -1,3 +1,5 @@
+import '../initAssets.js';
+
 /**
  * Texture Preload List - ALL textures for the entire experience
  * Everything loads during the initial preloader for zero stutter when entering rooms.
